@@ -1,0 +1,164 @@
+$cor_padrao : #54AA54;
+$fonte_padrao: 'Montserrat', sans-serif;
+
+
+@mixin largura_navbar($minWidth: fit-content) {
+    width: 4%;
+    min-width: $minWidth;
+}
+
+@mixin padding_navigation {
+    padding: .7em .55em;
+}
+
+/* HEADER */
+header {
+    background-image: url('../../src/assets/images/notebook-1280538_1920.jpg');
+    background-size: cover;
+}
+
+.header-box{
+    height: 90vh;
+    background-color: rgba($cor_padrao,0.3);
+}
+
+.header-content {
+    position:relative;
+    top:45%;
+    font-family: $fonte_padrao;
+    font-size: 2em;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-content:before {
+    position: absolute;
+    left: -1ch;
+    top:1;
+    font-size: 2em;
+    content:'<';
+}
+
+.header-content:after{
+    position: absolute;
+    content: "/>";
+    font-size: 1.9em;
+    right: -.8em;
+    top: .1ex;
+}
+
+.header-content p {
+    font-size: .5em;
+    padding: 1em;
+}
+
+@media screen and(max-width: 480px) {
+    .header-content {
+        font-size: 1.4em;
+    }
+}
+
+/*Left navigation bar*/
+
+.menu{
+    position: fixed;
+    height: 100vh;
+    @include largura_navbar;
+    background: rgba($cor_padrao, 0.3);
+    text-align: center;
+    box-shadow: 1px 1px 5px black;
+    z-index: 1;
+}
+
+.menu i {
+    @include padding_navigation;
+    color:white;
+    font-size: 1.3em;
+    transition: 400ms ease-in-out;
+}
+
+.menu i:hover {
+    background: $cor_padrao;
+}
+
+.text-menu{
+    position: fixed;
+    height: 80vh;
+    @include largura_navbar;
+}
+
+.menu p {
+    position: fixed;
+    font-family: $fonte_padrao;
+    transform-origin: 95% 1250%;
+    transform: rotate(-90deg);
+    color: white;
+}
+
+.menu p strong{
+    color:black;
+}
+
+/* Right navigation bar */
+
+.nav-buttons {
+    position: fixed;
+    right: 0;
+    @include largura_navbar(40px);
+    z-index: 1;
+
+}
+
+.nav-buttons i {
+    background: rgba($cor_padrao, 0.3);
+    color: white;
+    display: block;
+    @include padding_navigation;
+    text-align: center;
+    transition: 400ms ease-in-out;
+    border-top: 2px solid rgba($cor_padrao,0);
+}
+
+.nav-buttons i:hover{
+    background: rgba($cor_padrao, 1);
+}
+
+/*  Page text content  */
+
+.perfil{
+    background: linear-gradient(rgba($cor_padrao,0.3), #FEFEFE);
+    box-sizing: border-box;
+    padding-top: 10%;
+}
+
+.text-content{
+    margin: 0 auto 0 auto;
+    width:74%;
+    font-family: $fonte_padrao;
+}
+
+.text-content h2{
+    text-align: center;
+    margin: 0 0 1em 0;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.text-content img{
+    float:left;
+    min-width: 150px;
+    opacity:0.5;
+    width:30%;
+}
+
+@media screen and(max-width:702px){
+    .text-content img {
+        display: none;
+    }
+}
+
+.text-content p {
+    text-align: justify;
+    line-height: 2;
+}
