@@ -8,7 +8,7 @@ $fonte_padrao: 'Montserrat', sans-serif;
 }
 
 @mixin padding_navigation {
-    padding: .7em .55em;
+    padding: .7em .65em;
 }
 
 /* HEADER */
@@ -73,14 +73,33 @@ header {
 
 .menu i {
     @include padding_navigation;
+    box-sizing: border-box;
     color:white;
-    font-size: 1.3em;
+    font-size: 1.4em;
     transition: 400ms ease-in-out;
+    display:block;
+    background: rgba($cor_padrao,0);
 }
 
-.menu i:hover {
-    background: $cor_padrao;
+a {
+    text-decoration: none;
 }
+
+.flex-buttons{
+    position: relative;
+    transition: top 400ms ease-in-out;
+    z-index: 2;
+    top:-30%;
+}
+.isShown{
+    top:0;
+}
+
+.menu-clicado {
+    transform: rotate(-720deg);
+    transition: transform 400ms ease-in-out;
+}
+
 
 .text-menu{
     position: fixed;
@@ -154,7 +173,7 @@ header {
 
 @media screen and(max-width:702px){
     .text-content img {
-        display: none;
+        display:none;
     }
 }
 

@@ -58,14 +58,33 @@ header {
 }
 
 .menu i {
-  padding: 0.7em 0.55em;
+  padding: 0.7em 0.65em;
+  box-sizing: border-box;
   color: white;
-  font-size: 1.3em;
+  font-size: 1.4em;
   transition: 400ms ease-in-out;
+  display: block;
+  background: rgba(84, 170, 84, 0);
 }
 
-.menu i:hover {
-  background: #54AA54;
+a {
+  text-decoration: none;
+}
+
+.flex-buttons {
+  position: relative;
+  transition: top 400ms ease-in-out;
+  z-index: 2;
+  top: -30%;
+}
+
+.isShown {
+  top: 0;
+}
+
+.menu-clicado {
+  transform: rotate(-720deg);
+  transition: transform 400ms ease-in-out;
 }
 
 .text-menu {
@@ -100,7 +119,7 @@ header {
   background: rgba(84, 170, 84, 0.3);
   color: white;
   display: block;
-  padding: 0.7em 0.55em;
+  padding: 0.7em 0.65em;
   text-align: center;
   transition: 400ms ease-in-out;
   border-top: 2px solid rgba(84, 170, 84, 0);

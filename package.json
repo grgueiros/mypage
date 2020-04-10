@@ -9,7 +9,16 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "live-server": "^1.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GRGueiros/mypage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GRGueiros/mypage/issues"
+  },
+  "homepage": "https://github.com/GRGueiros/mypage#readme"
 }
