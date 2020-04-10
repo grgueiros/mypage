@@ -111,9 +111,15 @@ a {
 .menu p {
     position: fixed;
     font-family: $fonte_padrao;
-    transform-origin: 95% 1250%;
+    transform-origin: 100px 80px;
     transform: rotate(-90deg);
     color: white;
+}
+
+@media screen and(max-height:350px){
+    .menu p {
+        transform-origin: 60px 45px;
+    }
 }
 
 .menu p strong{
