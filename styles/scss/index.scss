@@ -79,6 +79,7 @@ header {
     transition: 400ms ease-in-out;
     display:block;
     background: rgba($cor_padrao,0);
+    border-top: 2px solid rgba(#FFF, 0);
 }
 
 a {
@@ -89,7 +90,7 @@ a {
     position: relative;
     transition: top 400ms ease-in-out;
     z-index: 2;
-    top:-30%;
+    top:-50%;
 }
 .isShown{
     top:0;
