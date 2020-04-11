@@ -9,13 +9,17 @@ $fonte_padrao: 'Montserrat', sans-serif;
 }
 
 @mixin padding_navigation {
-    padding: .7em .70em;
+    padding: .6em .70em;
 }
 
 /* HEADER */
 header {
     background-image: url('../../src/assets/images/startup-593327_1920.jpg');
     background-size: cover;
+}
+
+body{
+    background-color: $cor_padrao;
 }
 
 .header-box{
@@ -81,7 +85,6 @@ header {
     transition: 400ms ease-in-out;
     display:block;
     background: rgba($cor_padrao,0);
-    border-top: 2px solid rgba(#FFF, 0);
 }
 
 a {
@@ -92,7 +95,7 @@ a {
     position: relative;
     transition: top 400ms ease-in-out;
     z-index: 2;
-    top:-50%;
+    top:-150px;
 }
 .isShown{
     top:0;
@@ -120,7 +123,7 @@ a {
 
 @media screen and(max-height:350px){
     .menu p {
-        transform-origin: 60px 45px;
+       display:none;
     }
 }
 
@@ -156,38 +159,69 @@ a {
 /*  Page text content  */
 
 .perfil{
-    background: linear-gradient(rgba($cor_padrao,0.3), #FEFEFE);
+    background: linear-gradient(#FEFEFE,$cor_padrao);
     box-sizing: border-box;
     padding-top: 10%;
 }
 
-.text-content{
+.profile-content{
     margin: 0 auto 0 auto;
     width:74%;
     font-family: $fonte_padrao;
+    box-sizing: border-box;
+    padding-top: 10%;
 }
 
-.text-content h2{
+.profile-content h2{
     text-align: center;
     margin: 0 0 1em 0;
     font-weight: bold;
     font-size: 2em;
 }
 
-.text-content img{
-    float:left;
-    min-width: 150px;
-    opacity:0.5;
-    width:30%;
-}
-
 @media screen and(max-width:702px){
-    .text-content img {
+    .profile-content img {
         display:none;
     }
 }
 
-.text-content p {
+.profile-content p {
     text-align: justify;
     line-height: 2;
+}
+
+.text-content{
+    min-height: 400px;
+}
+
+footer{
+    clear: both;
+    text-align: center;
+    min-height: 30vh;
+    width: 100%;
+    background: rgba($cor_padrao,1);
+}
+
+footer .links{
+    position: relative;
+    top:14vh;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.links a {
+    font-size: 1.5em;
+    padding: 1em;
+    background: $button_color;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
+.links a:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.links a:last-child{
+    border-radius: 0 5px 5px 0;
 }
