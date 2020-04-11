@@ -1,4 +1,5 @@
-$cor_padrao : #54AA54;
+$cor_padrao :  #669999;
+$button_color: #FEFEFE;
 $fonte_padrao: 'Montserrat', sans-serif;
 
 
@@ -8,12 +9,12 @@ $fonte_padrao: 'Montserrat', sans-serif;
 }
 
 @mixin padding_navigation {
-    padding: .7em .65em;
+    padding: .7em .70em;
 }
 
 /* HEADER */
 header {
-    background-image: url('../../src/assets/images/notebook-1280538_1920.jpg');
+    background-image: url('../../src/assets/images/startup-593327_1920.jpg');
     background-size: cover;
 }
 
@@ -23,6 +24,7 @@ header {
 }
 
 .header-content {
+    color:$button_color;
     position:relative;
     top:45%;
     font-family: $fonte_padrao;
@@ -74,7 +76,7 @@ header {
 .menu i {
     @include padding_navigation;
     box-sizing: border-box;
-    color:white;
+    color:$button_color;
     font-size: 1.4em;
     transition: 400ms ease-in-out;
     display:block;
@@ -96,7 +98,7 @@ a {
     top:0;
 }
 
-.menu-clicado {
+.menu .menu-clicado {
     transform: rotate(-720deg);
     transition: transform 400ms ease-in-out;
 }
@@ -113,7 +115,7 @@ a {
     font-family: $fonte_padrao;
     transform-origin: 120px 95px;
     transform: rotate(-90deg);
-    color: white;
+    color: $button_color;
 }
 
 @media screen and(max-height:350px){
@@ -137,8 +139,9 @@ a {
 }
 
 .nav-buttons i {
+    font-size:1.4em;
     background: rgba($cor_padrao, 0.3);
-    color: white;
+    color: $button_color;
     display: block;
     @include padding_navigation;
     text-align: center;
